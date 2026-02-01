@@ -48,12 +48,24 @@ body {
 /* Title & Subtitle */
 h1 {
   font-family: 'Arabic', sans-serif;
-  font-size: 4rem;
+  font-size: 70px;
   color: #ff3366;
   text-shadow: 2px 2px 12px #000;
   margin-bottom: 0.5rem;
   text-align: center;
 }
+
+@keyframes beat {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(-5deg); }
+  50% { transform: scale(1.2) rotate(5deg); }
+  75% { transform: scale(1.1) rotate(-3deg); }
+}
+
+h1 svg {
+  animation: beat 2s infinite ease-in-out;
+}
+
 .subtitle {
   font-size: 1.5rem;
   margin-bottom: 2rem;
